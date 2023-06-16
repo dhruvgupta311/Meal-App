@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import '../models/meal.dart';
+import '../screens/meal_detail_scree.dart';
 
 class MealItem extends StatelessWidget {
   final String id;
@@ -18,7 +19,11 @@ class MealItem extends StatelessWidget {
       required this.duration,
       required this.complexity,
       required this.affordability});
-  void seletMeal(BuildContext context) {}
+  void seletMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(MealDetailScreen.routeName,
+    arguments: id,
+    );
+  }
 
   String get complexityText {
     switch (complexity) {
