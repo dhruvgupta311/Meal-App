@@ -5,7 +5,8 @@ import '../dummy_data.dart';
 
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
-   Widget buildSectionTitle(BuildContext context, String text) {
+
+  Widget buildSectionTitle(BuildContext context, String text){
     return Container(
       margin: EdgeInsets.symmetric(vertical: 10),
       child: Text(text, style: Theme.of(context).textTheme.titleLarge),
